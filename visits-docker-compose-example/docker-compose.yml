@@ -1,0 +1,14 @@
+# version of Docker Compose
+version: '3'
+# Type of Containers
+services:
+  redis-server:
+    image: 'redis'
+  node-app:
+    # Restart Policy
+    restart: on-failure
+    # Build an image from files in current context
+    build: .
+    # port config for node-app, takes array
+    ports:
+      - "4001:8081"
