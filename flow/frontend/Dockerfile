@@ -3,7 +3,7 @@
 FROM node:17-alpine3.12 as builder
 # assigning a reference to this container as builder
 
-# Creating root node
+# Creating root dir
 WORKDIR '/app'
 
 # Copying only package, to enable cached build
