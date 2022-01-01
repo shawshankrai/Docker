@@ -1,5 +1,5 @@
 # 1. Build Phase
-# a. base image
+# a. base image of node
 FROM node:17-alpine3.12 as builder
 # assigning a reference to this container as builder
 
