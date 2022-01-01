@@ -18,3 +18,15 @@ services:
       - /home/node/app/node_modules
       # Current folder outside the container to inside
       - .:/home/node/app
+  # to run test of our react app as seprate service:
+  tests:
+    build:
+      # from where we want oour file and folders
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - /home/node/app/node_modules
+      # Current folder outside the container to inside
+      - .:/home/node/app
+    # override default command which is present in Dockerfile.dev
+    command: ["npm", "run", "test"]
