@@ -20,9 +20,6 @@ jobs:
     # OS, can provide multiple os
     runs-on: ubuntu-latest
 
-    # disabling workflow
-    if: "false"
-
     # steps involved in the current job
     steps:
     # Action for checking out code
